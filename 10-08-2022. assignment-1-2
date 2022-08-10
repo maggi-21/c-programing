@@ -1,0 +1,30 @@
+//PROGRAM TO REPLACE A DIGIT.
+#include <stdio.h>
+int main() 
+{
+int n,r,sum=0,t=1,x,y;
+printf("enter a number:");
+scanf("%d",&n);
+printf("enter x,y values:");
+scanf("%d%d",&x,&y);
+while(n>0)
+ {
+  r=n%10;
+  if(r==x)
+  sum=sum+y*t;
+  else
+  sum=sum+r*t;
+  t=t*10;
+  n=n/10;
+ }
+printf("%d\n",sum);
+return 0;
+}
+OUTPUT-1:
+enter a number:16918
+enter x,y values:1 7
+76978
+OUTPUT-2:
+enter a number:12345
+enter x,y values:3 9
+12945
