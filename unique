@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    
+   int arr[40],i,j,n,k=0;
+    printf("enter  a number");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+    for(j=i+1;j<i;j++)
+    {
+        if(arr[i]==arr[j])
+        {
+        printf("duplicate");
+        k=1;
+        break;
+    }
+    }
+    }
+    if(k==0)
+    printf("unique");
+    
+    return 0;
+}
+output-1:
+enter  a number5
+1 
+2
+3
+4
+5
+unique
+output-2:
+enter  a number5
+1
+2
+3
+3
+4
+5
+duplicate
+    
