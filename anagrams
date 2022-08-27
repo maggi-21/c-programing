@@ -33,4 +33,8 @@ int main() {
         printf(" anagrams");
      }
     return 0;
+    output:
+    enter two strings:below
+below
+anagrams.
   }
