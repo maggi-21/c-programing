@@ -1,0 +1,25 @@
+#include <stdio.h>
+void display(int n,int m);
+int main() {
+    int m,n;
+scanf("%d%d",&n,&m);
+display(n,m);
+    return 0;
+}
+void display(int n,int m)
+{
+    if(n>m)
+    return;
+    else
+    printf("%d\n",n);
+    display(n+1,m);
+}
+output:
+4 10
+4
+5
+6
+7
+8
+9
+10
