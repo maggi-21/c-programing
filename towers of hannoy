@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void towers(int, char,char,char);
+int main() 
+{
+    int num;
+    scanf("%d",&num);
+    towers(num,'A','C','B');
+    return 0;
+}
+void towers(int num,char source,char target,char temp)
+{
+    if(num==1)
+    {
+        printf("\n Move ring 1 from  %c to  %c",source,target);
+        return;
+    }
+    towers(num-1,source,temp,target);
+    printf("\n Move ring %d from  %c to  %c",num,source,target);
+    towers(num-1,temp,target,source);
+}
