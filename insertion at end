@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *next;
+}*head=null;
+void insert atend(int value)
+{
+    struct node *newnode;
+    newnode=(struct node *)malloc(sizeof(struct node));
+    newnode->data=value;
+    newnode->next=Null;
+    if(head==Null)
+    head=newnode;
+    else
+    {
+        structnode *temp=head;
+        while(temp->next!=Null)
+        temp=temp->next;
+        temp->next=newnode;
+    }
+    printf("one node is inserted at end");
+}
