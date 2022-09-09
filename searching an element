@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include<stdlib.h>
+void search();
+struct node
+{
+    int data;
+    struct node *next;
+};
+struct node*head;
+void create(int item)
+{
+    struct node*ptr=(struct node*)malloc(sizeof(struct node*));
+    if(ptr==Null)
+    {
+        printf("over flow");
+    }
+    else
+    {
+        ptr->data=item;
+        ptr->next=head;
+        head=ptr;
+        printf("node inserted");
+    }
+}
+void search()
+{
+    struct node*ptr;
+    int item,i=0,flag;
+    ptr=head;
+    if(ptr==Null)
+    printf("Empty list");
+    else
+    {
+        printf("enter  the item ");
+        scanf("%d",&item);
+        while(ptr!=Null)
+        {
+            if(ptr->data==item)
+            {
+                printf("item found at location%d",i+1);
+                flag=0;
+            }
+            else
+            {
+                flag=1;
+            }
+            i++;
+            ptr=ptr->next;
+        }
+        if(flag==1)
+        printf("item not found");
+    
+    }
+}
